@@ -33,6 +33,10 @@ class PasswordController extends Controller
             $possibleChars .= '!@#$%^&*';
         }
 
+        do {
+            $possibleChars = str_repeat($possibleChars, 2);
+        } while (strlen($possibleChars) < $length);
+
         // Transforma a string em um array de letras
         $letterArray = str_split($possibleChars);
 
