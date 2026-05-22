@@ -16,4 +16,12 @@ class GeneratedPassword extends Model
         'numbers',
         'symbols',
     ];
+
+    protected $casts = [
+        'length' => 'integer',
+        'uppercase' => 'boolean',
+        'lowercase' => 'boolean',
+        'numbers'   => 'boolean',
+        'symbols'   => 'boolean',
+    ];
 }

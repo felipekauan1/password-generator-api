@@ -2,13 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Http\Requests\GeneratePasswordRequest;
 use App\Models\GeneratedPassword;
-use GuzzleHttp\Promise\Create;
 
 class PasswordController extends Controller
 {
-    public function generate(Request $request)
+    public function generate(GeneratePasswordRequest $request)
     {
         $length = $request->input('length');
         $uppercase = $request->input('uppercase');
